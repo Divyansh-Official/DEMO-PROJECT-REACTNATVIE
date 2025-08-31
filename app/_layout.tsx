@@ -1,7 +1,10 @@
+import { ThemeProvider } from "@/hooks/useTheme";
 import { Stack } from "expo-router";
 
 export default function RootLayout() {
-  return <Stack screenOptions={{
+  return <ThemeProvider>
+
+<Stack screenOptions={{
     headerShown: false
   }}>
 
@@ -9,4 +12,6 @@ export default function RootLayout() {
     {/* <Stack.Screen name="nav1" options={{ title: "Nav1" }} /> */}
 
   </Stack>;
+
+  </ThemeProvider>
 }
